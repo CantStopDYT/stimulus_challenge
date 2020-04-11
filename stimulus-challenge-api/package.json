@@ -1,0 +1,30 @@
+{
+  "name": "stimulus-challenge-api",
+  "version": "1.0.0",
+  "description": "API to support stimulus-challenge UI, located at 'stimuluschallenge.net'",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CantStopDYT/stimulus_challenge.git"
+  },
+  "author": "Kris Hatcher",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CantStopDYT/stimulus_challenge/issues"
+  },
+  "homepage": "https://github.com/CantStopDYT/stimulus_challenge#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.24.0",
+    "moment-timezone": "^0.5.28",
+    "uuid": "^7.0.3",
+    "swagger-ui-express": "^4.1.4",
+    "then-request": "^6.0.2",
+    "mysql": "^2.18.1"
+  }
+}
