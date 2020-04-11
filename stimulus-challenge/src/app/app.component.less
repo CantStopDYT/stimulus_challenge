@@ -1,0 +1,247 @@
+@import "../assets/colors.less";
+
+#head {
+  border-top: 10px solid @lightPrimaryColor;
+
+  img {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+#section1 {
+  background-color: @primaryColor;
+  color: @lightText;
+  padding-top: 50px;
+
+  .dashboard {
+    background-color: #ffffff;
+    background-image: url("../assets/HeroGraphic.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-bottom: 10px solid @secondaryColor;
+    margin-top: -35px;
+
+    .arch {
+      width: 100%;
+      display: block;
+      border-color: transparent transparent @primaryColor transparent;
+      border-radius: 50% ~"/" 0 0 100px 100px;
+      border-style: solid;
+      border-width: 0;
+      height: 100px;
+      margin: 0 0 40px 0;
+      padding: 0;
+      background-color: @primaryColor;
+    }
+
+    .nonprofits,
+    .smallBiz {
+      width: 300px;
+      height: 100px;
+      display: block;
+      margin-bottom: 40px;
+      margin-right: auto;
+      margin-left: auto;
+      background-color: @primaryColor;
+      color: #ffffff;
+      padding: 10px;
+      border-bottom: 10px solid @lightPrimaryColor;
+      font-size: 14px;
+
+      p {
+        text-transform: uppercase;
+      }
+
+      h3 {
+        font-size: 44px;
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 790px) {
+  #section1 {
+    .dashboard {
+      padding-bottom: 220px;
+
+      .nonprofits,
+      .smallBiz {
+        display: inline-block;
+        margin-right: 0;
+        margin-left: 0;
+      }
+
+      .nonprofits {
+        margin-right: 60px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1030px) {
+  #section1 {
+    .dashboard {
+      padding-bottom: 350px;
+      background-image: url("../assets/HeroGraphic_Large.png");
+    }
+  }
+}
+
+#section2 {
+  h2 {
+    color: @primaryColor;
+
+    &.top {
+      margin-bottom: 0;
+    }
+
+    &.bottom {
+      margin-top: 0;
+    }
+  }
+
+  .description {
+    max-width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: left;
+    padding: 0 10px;
+  }
+}
+
+#donate {
+  background-color: @primaryColor;
+  color: @lightText;
+  margin-top: -35px;
+  padding-bottom: 35px;
+
+  .arch {
+    width: 100%;
+    display: block;
+    border-color: transparent transparent #ffffff transparent;
+    border-radius: 50% ~"/" 0 0 100px 100px;
+    border-style: solid;
+    border-width: 0;
+    height: 100px;
+    margin: 0 0 40px 0;
+    padding: 0;
+    background-color: #ffffff;
+  }
+
+  .lightLogo {
+    display: block;
+    margin: 0 auto 30px;
+  }
+
+  .box {
+    margin: 0 10px;
+    padding: 30px 0;
+    border: 1px solid @secondaryColor;
+    border-radius: 20px;
+  }
+
+  .inputGroup {
+    margin-bottom: 30px;
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input {
+      padding: 10px;
+      width: 100%;
+      text-align: center;
+      box-sizing: border-box;
+    }
+  }
+
+  button {
+    display: block;
+    margin: 0 auto -50px;
+  }
+
+  .disclaimer {
+    margin-top: 30px;
+    color: @grayText;
+    font-size: 12px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #donate {
+    text-align: center;
+
+    .box {
+      width: 500px;
+      margin: 0 auto;
+    }
+
+    .inputGroup {
+      width: 275px;
+      display: inline-block;
+
+      input {
+        width: 250px;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1030px) {
+  #donate {
+    .box {
+      width: 750px;
+    }
+  }
+}
+
+#section4 {
+  .graphic {
+    background-image: url("../assets/TransitionGraphic.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 300px;
+  }
+
+  #share {
+    background-color: @primaryColor;
+    color: #ffffff;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+@media only screen and (min-width: 1030px) {
+  #section4 {
+    .graphic {
+      background-image: url("../assets/TransitionGraphic_Large.png");
+      background-size: 100%;
+    }
+  }
+}
+
+#footer {
+  border-top: 10px solid @secondaryColor;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 12px;
+
+  p {
+    text-decoration: underline;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      margin: 0 10px;
+    }
+  }
+}
