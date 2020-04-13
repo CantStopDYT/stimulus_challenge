@@ -1,5 +1,5 @@
 # Stimulus Challenge
-Angular app showing amounts pledged for non-profits &amp; small businesses from 2019 Stimulus Payments
+Angular app showing amounts pledged for non-profits &amp; small businesses from 2019 Stimulus Payments.
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/45bdf612-84fc-4169-9933-78cfadfee81b/deploy-status)](https://app.netlify.com/sites/stimulus-challenge/deploys)
 
