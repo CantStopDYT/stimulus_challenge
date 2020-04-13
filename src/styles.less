@@ -38,8 +38,21 @@ button,
 #head {
   border-top: 10px solid @lightPrimaryColor;
 
-  img {
-    margin-top: 10px;
-    margin-bottom: 10px;
+  .logo {
+    width: 196px;
+    height: 53px;
+    margin: 10px auto;
+    background-image: url('assets/HeaderLogo.png');
+  }
+}
+
+@media
+screen and (-webkit-min-device-pixel-ratio: 1.25),
+screen and (-moz-min-device-pixel-ratio: 1.25),
+screen and (min-device-pixel-ratio: 1.25) {
+  #head .logo {
+    background-image: url('assets/HeaderLogo_Large.png');
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 }
