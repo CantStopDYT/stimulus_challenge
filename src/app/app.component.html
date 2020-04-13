@@ -14,37 +14,41 @@
     </div>
   </div>
 </div>
-<div id="section2" *ngIf="!resultSuccess">
+<div id="section2">
   <h2 class="top">50% &rarr; Local Non-Profits</h2>
   <h2 class="bottom">50% &rarr; Local Businesses</h2>
   <p class="description">We want to do our part to support the places and faces of our community. Stimulus checks from the federal government are on their way to Americans. The #StimulusChallenge encourages people to use their stimulus checks to support non-profits and small businesses in their local community.</p>
 </div>
-<form id="donate" [formGroup]="pledgeForm" *ngIf="!resultSuccess">
+<form id="donate" [formGroup]="pledgeForm">
   <div class="arch"></div>
   <div class="lightLogo" ></div>
-  <div class="box">
-    <div class="inputGroup">
-      <label for="name">What is your name?</label>
-      <input id="name" type="text" placeholder="Jane Smith" formControlName="name"/>
+    <div class="box" *ngIf="!resultSuccess">
+      <div class="inputGroup">
+        <label for="name">What is your name?</label>
+        <input id="name" type="text" placeholder="Jane Smith" formControlName="name"/>
+      </div>
+      <div class="inputGroup">
+        <label for="location">Where do you live?</label>
+        <input id="location" type="text" placeholder="ZIP Code" required="true" minlength="5" maxlength="5" formControlName="zip"/>
+      </div>
+      <div class="inputGroup">
+        <label for="nonprofitDonation">How much are you donating to local non-profits?</label>
+        <input id="nonprofitDonation" type="number" placeholder="$$$" min="0" step="1" formControlName="nonProfits"/>
+      </div>
+      <div class="inputGroup">
+        <label for="smallBizSpend">How much are you committing to local small businesses?</label>
+        <input id="smallBizSpend" type="number" placeholder="$$$" min="0" step="1" formControlName="smBiz"/>
+      </div>
+      <button (click)="makePledge()">Make Pledge</button>
     </div>
-    <div class="inputGroup">
-      <label for="location">Where do you live?</label>
-      <input id="location" type="text" placeholder="ZIP Code" required="true" minlength="5" maxlength="5" formControlName="zip"/>
-    </div>
-    <div class="inputGroup">
-      <label for="nonprofitDonation">How much are you donating to local non-profits?</label>
-      <input id="nonprofitDonation" type="number" placeholder="$$$" min="0" step="1" formControlName="nonProfits"/>
-    </div>
-    <div class="inputGroup">
-      <label for="smallBizSpend">How much are you committing to local small businesses?</label>
-      <input id="smallBizSpend" type="number" placeholder="$$$" min="0" step="1" formControlName="smBiz"/>
-    </div>
-    <button (click)="makePledge()">Make Pledge</button>
+  <p class="disclaimer" *ngIf="!resultSuccess">We will not be collecting or distributing any money, this is your personal commitment to fulfill.</p>
+  <div *ngIf="resultSuccess">
+    <h2>Thanks for taking the #StimulusChallenge!</h2>
+    <p>We'd love to see how you're supporting local on social media.  Use #StimulusChallenge and help us get the word out.</p>
   </div>
-  <p class="disclaimer">We will not be collecting or distributing any money, this is your personal commitment to fulfill.</p>
 </form>
-<div id="section4" *ngIf="!resultSuccess">
-  <div class="graphic"></div>
+<div id="section4">
+  <div class="graphic" *ngIf="!resultSuccess"></div>
   <div id="share">
     <div class="leftSide">
       <h3>Share the #StimulusChallenge</h3>
@@ -54,22 +58,6 @@
       </div>
     </div>
     <img src="../assets/SocialImage.png" alt="Share #StimulusChallenge on social Media" />
-  </div>
-</div>
-<div id="result" class="tableBody" *ngIf="resultSuccess">
-  <div class="tableRow">
-    <div class="tableCell thanks">
-      <h2>Thanks for taking the #StimulusChallenge!</h2>
-      <p>We'd love to see how you're supporting local on social media.  Use #StimulusChallenge and help us get the word out.</p>
-      <div class="sharing">
-        <div class="fb-share-button" data-href="https://www.stimuluschallenge.us/" data-layout="button_count" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.stimuluschallenge.us%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
-        <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=I%20just%20supported%20my%20local%20community%20by%20taking%20part%20in%20the%20%23StimulusChallenge%21%20Join%20me%21%20stimuluschallenge.us&hashtags=StimulusChallenge,GiveLocal" data-size="large">Tweet</a>
-      </div>
-      <button>Share &rarr;</button>
-    </div>
-    <div class="tableCell giveSpendImg">
-      <p>'Give Local. Spend Local.' image goes here</p>
-    </div>
   </div>
 </div>
 <div id="footer">
