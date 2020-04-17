@@ -33,7 +33,15 @@ export class AppComponent {
 
   makePledge() {
     if (this.pledgeForm.valid  && (this.pledgeForm.value["NonProfit"] > 0 || this.pledgeForm.value["SmallBiz"] > 0)) {
-      this._http.post("/form-endpoint", this.pledgeForm.value, {headers: {"Content-Type" : ["application/x-www-form-urlencoded"]}}).subscribe(r=>{});
+      
+      var formValues = "?";
+      
+      formValues += "Name=" + encodeURIComponent(this.pledgeForm.value["Name"]) + "&";
+      formValues += "ZipCode=" + encodeURIComponent(this.pledgeForm.value["ZipCode"]) + "&";
+      formValues += "NonProfit=" + encodeURIComponent(this.pledgeForm.value["NonProfit"]) + "&";
+      formValues += "SmallBiz=" + encodeURIComponent(this.pledgeForm.value["SmallBiz"]);
+      
+      this._http.post("/form-endpoint" + formValues, this.pledgeForm.value, {headers: {"Content-Type" : ["application/x-www-form-urlencoded"]}}).subscribe(r=>{});
       
       this.resultSuccess = true;
     } else {
