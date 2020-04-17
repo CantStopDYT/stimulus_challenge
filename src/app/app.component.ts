@@ -37,7 +37,7 @@ export class AppComponent {
       
       //this._http.post("https://api.stimuluschallenge.us/pledge", this.pledgeForm.value);      
       
-      this._http.post("/form-endpoint", this.pledgeForm.value, {headers: {"Content-Type" : ["application/x-www-form-urlencoded"]}});
+      this._http.post("/form-endpoint", this.pledgeForm.value, {headers: {"Content-Type" : ["application/x-www-form-urlencoded"]}}).subscribe(r=>{});
       
       this.resultSuccess = true;
     } else {
