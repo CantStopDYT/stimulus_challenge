@@ -33,11 +33,11 @@ export class AppComponent {
 
   makePledge() {
     if (this.pledgeForm.valid  && (this.pledgeForm.value["NonProfit"] > 0 || this.pledgeForm.value["SmallBiz"] > 0)) {
-      //console.log(this.pledgeForm.value);
+      console.log(this.pledgeForm.value);
       
       //this._http.post("https://api.stimuluschallenge.us/pledge", this.pledgeForm.value);      
       
-      this._http.post("/form-endpoint", this.pledgeForm, {headers: {"Content-Type" : ["application/x-www-form-urlencoded"]}});
+      this._http.post("/form-endpoint", this.pledgeForm.value, {headers: {"Content-Type" : ["application/x-www-form-urlencoded"]}});
       
       this.resultSuccess = true;
     } else {
