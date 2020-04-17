@@ -33,10 +33,6 @@ export class AppComponent {
 
   makePledge() {
     if (this.pledgeForm.valid  && (this.pledgeForm.value["NonProfit"] > 0 || this.pledgeForm.value["SmallBiz"] > 0)) {
-      console.log(this.pledgeForm.value);
-      
-      //this._http.post("https://api.stimuluschallenge.us/pledge", this.pledgeForm.value);      
-      
       this._http.post("/form-endpoint", this.pledgeForm.value, {headers: {"Content-Type" : ["application/x-www-form-urlencoded"]}}).subscribe(r=>{});
       
       this.resultSuccess = true;
@@ -46,8 +42,6 @@ export class AppComponent {
   }
   
   getStats() {
-    console.log("getStats() hit");
-    
     this._http.get("https://api.stimuluschallenge.us/stats").subscribe((result) => {
       this.nonProfit = result["SmallBizTotal"];
       this.smallBiz = result["SmallBizTotal"];

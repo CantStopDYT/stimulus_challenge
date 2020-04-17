@@ -53,7 +53,16 @@
     <a href="/"><div class="logo"></div></a>
   </div>
   <app-root></app-root>
-
+  
+  <!-- putting this here for netlify integration
+  <form hidden name="PledgeForm" data-netlify="true" action="/form-endpoin">
+    <input id="name" type="text" placeholder="Jane Smith" formControlName="Name"/>
+    <input id="location" type="text" placeholder="ZIP Code" required="true" minlength="5" maxlength="5" formControlName="ZipCode"/>
+    <input id="nonprofitDonation" type="number" placeholder="$$$" min="0" step="1" formControlName="NonProfit"/>
+    <input id="smallBizSpend" type="number" placeholder="$$$" min="0" step="1" formControlName="SmallBiz"/>
+  </form>
+  -->
+  
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163849833-1"></script>
   <script>
