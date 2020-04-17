@@ -34,8 +34,7 @@ export class AppComponent {
   makePledge() {
     if (this.pledgeForm.valid  && (this.pledgeForm.value["NonProfit"] > 0 || this.pledgeForm.value["SmallBiz"] > 0)) {
       
-      var formValues = "";
-      
+      var formValues = "form-name=PledgeForm&";      
       formValues += "Name=" + encodeURIComponent(this.pledgeForm.value["Name"]) + "&";
       formValues += "ZipCode=" + encodeURIComponent(this.pledgeForm.value["ZipCode"]) + "&";
       formValues += "NonProfit=" + encodeURIComponent(this.pledgeForm.value["NonProfit"]) + "&";
