@@ -6,11 +6,11 @@
     <div class="arch"></div>
     <div class="nonprofits">
       <p>Pledged to local non-profits</p>
-      <h3>$300,560</h3>
+      <h3>$0</h3>
     </div>
     <div class="smallBiz">
       <p>Pledged to small businesses</p>
-      <h3>$300,560</h3>
+      <h3>$0</h3>
     </div>
   </div>
 </div>
@@ -19,25 +19,25 @@
   <h2 class="bottom">50% &rarr; Local Businesses</h2>
   <p class="description">We want to do our part to support the places and faces of our community. Stimulus checks from the federal government are on their way to Americans. The #StimulusChallenge encourages people to use their stimulus checks to support non-profits and small businesses in their local community.</p>
 </div>
-<form id="donate" [formGroup]="pledgeForm">
+<form id="donate" [formGroup]="pledgeForm" name="PledgeForm" data-netlify="true">
   <div class="arch"></div>
   <a href="/"><div class="lightLogo" ></div></a>
     <div class="box" *ngIf="!resultSuccess">
       <div class="inputGroup">
         <label for="name">What is your name?</label>
-        <input id="name" type="text" placeholder="Jane Smith" formControlName="name"/>
+        <input id="name" type="text" placeholder="Jane Smith" formControlName="Name"/>
       </div>
       <div class="inputGroup">
         <label for="location">Where do you live?</label>
-        <input id="location" type="text" placeholder="ZIP Code" required="true" minlength="5" maxlength="5" formControlName="zip"/>
+        <input id="location" type="text" placeholder="ZIP Code" required="true" minlength="5" maxlength="5" formControlName="ZipCode"/>
       </div>
       <div class="inputGroup">
         <label for="nonprofitDonation">How much are you donating to local non-profits?</label>
-        <input id="nonprofitDonation" type="number" placeholder="$$$" min="0" step="1" formControlName="nonProfits"/>
+        <input id="nonprofitDonation" type="number" placeholder="$$$" min="0" step="1" formControlName="NonProfit"/>
       </div>
       <div class="inputGroup">
         <label for="smallBizSpend">How much are you committing to local small businesses?</label>
-        <input id="smallBizSpend" type="number" placeholder="$$$" min="0" step="1" formControlName="smBiz"/>
+        <input id="smallBizSpend" type="number" placeholder="$$$" min="0" step="1" formControlName="SmallBiz"/>
       </div>
       <button (click)="makePledge()">Make Pledge</button>
     </div>
