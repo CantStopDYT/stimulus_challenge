@@ -55,10 +55,10 @@
   <app-root></app-root>
   
   <form hidden name="PledgeForm" data-netlify="true" action="/form-endpoint">
-    <input id="name" type="text" placeholder="Jane Smith" formControlName="Name"/>
-    <input id="location" type="text" placeholder="ZIP Code" required="true" minlength="5" maxlength="5" formControlName="ZipCode"/>
-    <input id="nonprofitDonation" type="number" placeholder="$$$" min="0" step="1" formControlName="NonProfit"/>
-    <input id="smallBizSpend" type="number" placeholder="$$$" min="0" step="1" formControlName="SmallBiz"/>
+    <input type="text" name="Name"/>
+    <input type="text" name="ZipCode" required="required" minlength="5" maxlength="5"/>
+    <input type="number" name="NonProfit" min="0" step="1"/>
+    <input type="number" name="SmallBiz" min="0" step="1"/>
   </form>
   
   <!-- Global site tag (gtag.js) - Google Analytics -->
