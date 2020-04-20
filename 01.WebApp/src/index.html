@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>#StimulusChallenge</title>
+  <base href="/">
+  <meta charset="UTF-8">
+  <meta name="description" content="Take part in the #StimulusChallenge by using your US Federal Stimulus check to help simulate the economy by supporting non-profits and small businesses in your community.">
+  <meta name="keywords" content="Stimulus,Challenge,Donations,Refund,Small Business,Non-Profits,nonprofits,business">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:url"                content="https://www.stimuluschallenge.us" />
+  <meta property="og:type"               content="website" />
+  <meta property="og:title"              content="#StimulusChallenge" />
+  <meta property="og:description"        content="Take part in the #StimulusChallenge by using your US Federal Stimulus check to help simulate the economy by supporting non-profits and small businesses in your community." />
+  <meta property="og:image"              content="https://www.stimuluschallenge.us/assets/Logo_Facebook.png" />
+  <meta property="og:image:width"        content="1080" />
+  <meta property="og:image:height"       content="721" />
+  <meta property="og:image:alt"          content="#Stimulus Challenge Logo" />
+  <meta property="fb:app_id"             content="515183092696126" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@cantstopdyt" />
+
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="me" href="https://twitter.com/cantstopdyt">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;900&family=Work+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- code for FB share button -->
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0&appId=155420847849282&autoLogAppEvents=1"></script>
+<!-- end code for FB share button -->
+<!-- code for Twitter share button -->
+<script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+          t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+<!-- end code for Twitter share button -->
+<div id="head">
+  <a href="/"><div class="logo"></div></a>
+</div>
+
+  <app-root></app-root>
+
+<form hidden name="PledgeForm" data-netlify="true" action="/form-endpoint">
+  <input type="text" name="Name"/>
+  <input type="text" name="ZipCode" required="required" minlength="5" maxlength="5"/>
+  <input type="number" name="NonProfit" min="0" step="1"/>
+  <input type="number" name="SmallBiz" min="0" step="1"/>
+</form>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163849833-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-163849833-1');
+</script>
+</body>
+</html>

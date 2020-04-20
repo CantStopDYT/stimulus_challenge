@@ -1,0 +1,63 @@
+@import "../../assets/colors.less";
+
+#qna {
+  text-align: left;
+  max-width: 650px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 20px;
+  padding: 0 40px;
+
+  .backToPledge {
+    color: @secondaryColor;
+    text-decoration: none;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 50px;
+
+    li {
+      padding: 10px;
+      position: relative;
+      font-size: 14px;
+
+      &:before {
+        font-weight: 300;
+        font-family: 'Work Sans', sans-serif;
+        width: 45px;
+        position: absolute;
+        top: 0;
+        font-size: 32px;
+        left: -50px;
+        border-left: 5px solid black;
+        height: 100%;
+        padding-left: 8px;
+      }
+    }
+
+    .question {
+      font-weight: 900;
+      background-color: #eeeeee;
+      margin-bottom: 2px;
+
+      &:before {
+        content: "Q.";
+        border-left-color: @lightPrimaryColor;
+        color: @lightPrimaryColor;
+        background-color: #eeeeee;
+        line-height: 32px;
+      }
+    }
+
+    .answer {
+      margin-bottom: 25px;
+
+      &:before {
+        content: "A.";
+        border-left-color: @lightGrayText;
+        color: @lightGrayText;
+      }
+    }
+  }
+}
