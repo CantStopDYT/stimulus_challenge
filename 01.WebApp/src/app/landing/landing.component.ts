@@ -58,4 +58,9 @@ export class LandingComponent implements OnInit {
       this.smallBiz = result["SmallBizTotal"];
     });
   }
+
+  scroll(id) {
+    let el = document.getElementById(id);
+    el.scrollIntoView();
+  }
 }
