@@ -28,7 +28,7 @@ const routes: Routes = [
     StatsComponent
   ],
   imports: [
-    RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled' }),
+    RouterModule.forRoot(routes, { useHash: true, scrollPositionRestoration: 'enabled' }),
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
