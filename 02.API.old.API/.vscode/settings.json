@@ -1,5 +1,9 @@
 {
     "appService.preDeployTask": "publish-release",
-    "appService.deploySubpath": "",
-    "appService.defaultWebAppToDeploy": "/subscriptions/641887ac-78ce-4efd-aeb5-201790fea845/resourceGroups/stimulusChallengeEast/providers/Microsoft.Web/sites/stimulusChallengeApi"
+    "appService.deploySubpath": "StimulusChallenge.API",
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/641887ac-78ce-4efd-aeb5-201790fea845/resourceGroups/stimulusChallengeApiV2/providers/Microsoft.Web/sites/stimulusChallengeApiV2"
 }

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "/Users/krishatcher/Github/stimulus_challenge_v2/02.API/StimulusChallenge.API/StimulusChallenge.API.csproj": {}
+    "/Users/krishatcher/Github/stimulus_challenge/02.API.old.API/StimulusChallenge.API/StimulusChallenge.API.csproj": {}
   },
   "projects": {
-    "/Users/krishatcher/Github/stimulus_challenge_v2/02.API/StimulusChallenge.API/StimulusChallenge.API.csproj": {
+    "/Users/krishatcher/Github/stimulus_challenge/02.API.old.API/StimulusChallenge.API/StimulusChallenge.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/krishatcher/Github/stimulus_challenge_v2/02.API/StimulusChallenge.API/StimulusChallenge.API.csproj",
+        "projectUniqueName": "/Users/krishatcher/Github/stimulus_challenge/02.API.old.API/StimulusChallenge.API/StimulusChallenge.API.csproj",
         "projectName": "StimulusChallenge.API",
-        "projectPath": "/Users/krishatcher/Github/stimulus_challenge_v2/02.API/StimulusChallenge.API/StimulusChallenge.API.csproj",
+        "projectPath": "/Users/krishatcher/Github/stimulus_challenge/02.API.old.API/StimulusChallenge.API/StimulusChallenge.API.csproj",
         "packagesPath": "/Users/krishatcher/.nuget/packages/",
-        "outputPath": "/Users/krishatcher/Github/stimulus_challenge_v2/02.API/StimulusChallenge.API/obj/",
+        "outputPath": "/Users/krishatcher/Github/stimulus_challenge/02.API.old.API/StimulusChallenge.API/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "/Users/krishatcher/.config/NuGet/NuGet.Config"
+          "/Users/krishatcher/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
