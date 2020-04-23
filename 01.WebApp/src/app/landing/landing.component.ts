@@ -40,7 +40,9 @@ export class LandingComponent implements OnInit {
       formValues += "Name=" + encodeURIComponent(this.pledgeForm.value["Name"]) + "&";
       formValues += "ZipCode=" + encodeURIComponent(this.pledgeForm.value["ZipCode"]) + "&";
       formValues += "NonProfit=" + encodeURIComponent(this.pledgeForm.value["NonProfit"]) + "&";
-      formValues += "SmallBiz=" + encodeURIComponent(this.pledgeForm.value["SmallBiz"]);
+      formValues += "SmallBiz=" + encodeURIComponent(this.pledgeForm.value["SmallBiz"]) + "&";
+      formValues += "UserAgent=" + encodeURIComponent(navigator.userAgent);
+      
 
       this._http.post("/form-endpoint?" + formValues, formValues, {headers: {"Content-Type" : ["application/x-www-form-urlencoded"]}}).subscribe(r=>{});
 
