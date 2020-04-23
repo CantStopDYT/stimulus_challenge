@@ -1,12 +1,10 @@
-DELIMITER $$
-CREATE DEFINER=`sc_user`@`%` PROCEDURE `get_stats`()
-BEGIN
+CREATE PROCEDURE get_stats
+AS
 
 SELECT
 	SUM(SmallBiz) as 'TotalSmallBiz',
     SUM(NonProfit) as 'TotalNonProfit',
     COUNT(*) as 'TotalPledges'
-FROM Pledge;
+FROM dbo.Pledge
 
-END$$
-DELIMITER ;
+GO;
